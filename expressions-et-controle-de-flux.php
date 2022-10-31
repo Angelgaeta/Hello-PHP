@@ -1,5 +1,5 @@
 ﻿<?php // test1.php
-  echo "<h1>Mon apprentissage au PHP en quelques exercices</h1>";
+  echo "<h1>Expressions et contrôle du flux en PHP </h1>";
   echo "<hr>";
 
   echo "<h2><li>Affichage du nom de l'utilisateur :</li></h2>";
