@@ -210,4 +210,19 @@ echo "<br><b> Rappel: </b><br>
 - <i>Les variables statiques</i> sont accessibles uniquement au sein de la fonction qui les déclare, mais leur valeur est conservée, d'un appel au suivant de la fonction.<br>";
 
 
+
+/************************Vérification de l'existence d'une fonction déterminée :*********************************/
+echo "<hr>";
+echo "<h2><li>Vérification de l'existence d'une fonction déterminée :</li></h2>";
+echo "La fonction <i>function_exists</i> en vérifie l'existence parmi toutes les fonctions prédéfinies et celles définies par l'utilisateur.<br> => ";
+
+if (function_exists("array_combine"))
+  {
+    echo "'La fonction existe'";
+  }
+  else
+  {
+    echo "'La fonction n'existe pas - Créez la vôtre'";
+  }
+
 ?>
