@@ -3,7 +3,7 @@
   echo "<hr>";
 
   echo "<h2><li>Affichage du nom de l'utilisateur :</li></h2>";
-  $utilisateur = "Angélique Redjdal";
+  $utilisateur = "Angel Gaeta";
   //echo $utilisateur;
   $utilisateur_courant = $utilisateur;
   echo $utilisateur_courant;
