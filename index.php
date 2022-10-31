@@ -113,6 +113,7 @@ while ($j > -10)
 }
 
 
+
 /************************Conversion explicite de type*********************************/
 echo "<hr>";
 echo "<h2><li>Conversion explicite de type (ici pour obtenir un int et non un float :</li></h2>";
@@ -124,6 +125,7 @@ $c = (int) ($a / $b);
 echo "56 fois 12 est égale sans le décimal à $c.";
 
 
+
 /************************Fonctions*********************************/
 echo "<hr>";
 echo "<h2><li>Fonctions :</li></h2>";
@@ -131,4 +133,22 @@ echo "<h2><li>Fonctions :</li></h2>";
 echo strrev(" .suot ,ruojnoB")."<b> => 'strrev' : chaîne inversée (ex. .ruojnoB donne 'Bonjour')</b><br>"; // Chaîne inversée
 echo str_repeat("Hip ", 3)."<b> => ' str_repeat' : répétuition en chaîne (ex. ('Hip ', 3) donne 'Hip' trois fois)</b><br>";     // Répétition de chaîne
 echo strtoupper("hourra!")."<b> => 'strtoupper' : chaîne en capitales (ex. 'hourra!' donne 'HOURA!')</b><br>";     // Chaîne en capitales
+
+
+
+/************************Nettoyer un nom complet*********************************/
+echo "<hr>";
+echo "<h2><li>Nettoyer un nom complet :</li></h2>";
+echo "Convertie 'WILLIAM, henry, gatES' en minuscule puis en mettant la première lettre en majuscule avec la fonction. <br>Exemple: <b>ucfirst(strtolower('WILLIAM'));<br>=> </b>";
+
+echo fixe_noms("WILLIAM", "henry", "gatES");
+
+function fixe_noms($n1, $n2, $n3)
+{
+  $n1 = ucfirst(strtolower($n1)); // PHP passe la chaine d'abord à strtolower et son résultat seulement ensuite à ucfirst
+  $n2 = ucfirst(strtolower($n2));
+  $n3 = ucfirst(strtolower($n3));
+
+  return $n1 . " " . $n2 . " " . $n3;
+}
 ?>
