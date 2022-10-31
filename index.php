@@ -141,7 +141,7 @@ echo "<hr>";
 echo "<h2><li>Retourner une valeur, nettoyer un nom complet :</li></h2>";
 echo "Convertie 'WILLIAM, henry, gatES' en minuscule puis en mettant la première lettre en majuscule avec la fonction. <br>Exemple: <b>ucfirst(strtolower('WILLIAM'));<br>=> </b>";
 
-/* RETOURNER UNE VALEUR SIMPLE:
+/*1 RETOURNER UNE VALEUR SIMPLE:
 
 echo fixe_noms("WILLIAM", "henry", "gatES");
 
@@ -155,7 +155,7 @@ function fixe_noms($n1, $n2, $n3)
 }*/
 
 
-// RETOURNER PLUSIEURS VALEURS DANS UN TABLEAU: 
+//2 RETOURNER PLUSIEURS VALEURS DANS UN TABLEAU: 
 
 $noms = fixe_noms("WILLIAM", "henry", "gatES");
 echo $noms[0] . " " . $noms[1] . " " . $noms[2];
@@ -164,9 +164,50 @@ function fixe_noms($n1, $n2, $n3)
 {
   $n1 = ucfirst(strtolower($n1));
   $n2 = ucfirst(strtolower($n2));
-  $n3 = ucfirst(strtolower($n3));
+  $n3 = ucfirst(strtolower($n3)) . "<br>";
 
   return array($n1, $n2, $n3);
 }
+
+
+/*3 PASSAGE DE VALEURS À UNE FONCTION PAR RÉFÉRENCE => N'EST PLUS AUTORISÉ PAR PHP !
+
+$a1 = "WILLIAM";
+$a2 = "henry";
+$a3 = "gatES";
+
+echo $a1 . " " . $a2 . " " . $a3 . "<br>";
+fixe_noms($a1, $a2, $a3);
+echo $a1 . " " . $a2 . " " . $a3;
+
+function fixe_noms(&$n1, &$n2, &$n3) // Passage par référence
+{
+  $n1 = ucfirst(strtolower($n1));
+  $n2 = ucfirst(strtolower($n2));
+  $n3 = ucfirst(strtolower($n3));
+}*/
+
+
+/*4 RENVOI DE VARIABLES GLOBALES => ATTENTION CERTE IL N'EST PLUS NECESSAIRE DE PASSER DE PARAMÈTRES À LA FONCTION MAIS LES VARIABLES DEMEURENT GLOBALES ET ACCESSIBLES À TOUT LE RESTE DU PROGRAMME, Y COMPRIS AUX AUTRES FONCTIONS !
+
+$a1 = "WILLIAM";
+$a2 = "henry";
+$a3 = "gatES";
+
+echo $a1 . " " . $a2 . " " . $a3 . "<br>";
+fixe_noms();
+echo $a1 . " " . $a2 . " " . $a3;
+
+function fixe_noms()
+{
+  global $a1; $a1 = ucfirst(strtolower($a1));
+  global $a2; $a2 = ucfirst(strtolower($a2));
+  global $a3; $a3 = ucfirst(strtolower($a3));
+}*/
+
+echo "<br><b> Rappel: </b><br>
+- <i>Les variables globales</i> sont accessibles à toutes les parites du code, que ce soit à l'intérieur ou à l'extérieur des fonctions.<br>
+- <i>Les variables statiques</i> sont accessibles uniquement au sein de la fonction qui les déclare, mais leur valeur est conservée, d'un appel au suivant de la fonction.<br>";
+
 
 ?>
