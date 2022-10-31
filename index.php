@@ -141,6 +141,8 @@ echo "<hr>";
 echo "<h2><li>Retourner une valeur, nettoyer un nom complet :</li></h2>";
 echo "Convertie 'WILLIAM, henry, gatES' en minuscule puis en mettant la première lettre en majuscule avec la fonction. <br>Exemple: <b>ucfirst(strtolower('WILLIAM'));<br>=> </b>";
 
+/* RETOURNER UNE VALEUR SIMPLE:
+
 echo fixe_noms("WILLIAM", "henry", "gatES");
 
 function fixe_noms($n1, $n2, $n3)
@@ -150,5 +152,21 @@ function fixe_noms($n1, $n2, $n3)
   $n3 = ucfirst(strtolower($n3));
 
   return $n1 . " " . $n2 . " " . $n3;
+}*/
+
+
+// RETOURNER PLUSIEURS VALEURS DANS UN TABLEAU: 
+
+$noms = fixe_noms("WILLIAM", "henry", "gatES");
+echo $noms[0] . " " . $noms[1] . " " . $noms[2];
+
+function fixe_noms($n1, $n2, $n3)
+{
+  $n1 = ucfirst(strtolower($n1));
+  $n2 = ucfirst(strtolower($n2));
+  $n3 = ucfirst(strtolower($n3));
+
+  return array($n1, $n2, $n3);
 }
+
 ?>
