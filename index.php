@@ -136,9 +136,9 @@ echo strtoupper("hourra!")."<b> => 'strtoupper' : chaîne en capitales (ex. 'hou
 
 
 
-/************************Nettoyer un nom complet*********************************/
+/************************Retourner une valeur, nettoyer un nom complet :***************/
 echo "<hr>";
-echo "<h2><li>Nettoyer un nom complet :</li></h2>";
+echo "<h2><li>Retourner une valeur, nettoyer un nom complet :</li></h2>";
 echo "Convertie 'WILLIAM, henry, gatES' en minuscule puis en mettant la première lettre en majuscule avec la fonction. <br>Exemple: <b>ucfirst(strtolower('WILLIAM'));<br>=> </b>";
 
 echo fixe_noms("WILLIAM", "henry", "gatES");
