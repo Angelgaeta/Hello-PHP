@@ -123,4 +123,12 @@ $c = (int) ($a / $b);
 
 echo "56 fois 12 est égale sans le décimal à $c.";
 
+
+/************************Fonctions*********************************/
+echo "<hr>";
+echo "<h2><li>Fonctions :</li></h2>";
+
+echo strrev(" .suot ,ruojnoB")."<b> => 'strrev' : chaîne inversée (ex. .ruojnoB donne 'Bonjour')</b><br>"; // Chaîne inversée
+echo str_repeat("Hip ", 3)."<b> => ' str_repeat' : répétuition en chaîne (ex. ('Hip ', 3) donne 'Hip' trois fois)</b><br>";     // Répétition de chaîne
+echo strtoupper("hourra!")."<b> => 'strtoupper' : chaîne en capitales (ex. 'hourra!' donne 'HOURA!')</b><br>";     // Chaîne en capitales
 ?>
