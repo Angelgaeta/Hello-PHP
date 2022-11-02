@@ -32,6 +32,7 @@ $nom = $_FILES['nomfichier']['name'];
 
 switch($_FILES['nomfichier']['type'])
 {
+  case 'image/pjpeg':
   case 'image/jpeg': $ext = 'jpg'; break;
   case 'image/gif':  $ext = 'gif'; break;
   case 'image/png':  $ext = 'png'; break;
