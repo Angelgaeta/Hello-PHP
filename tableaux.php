@@ -1,7 +1,7 @@
 <?php
 echo "<h1>Les tableaux en PHP</h1>";
 echo "<hr>";
-
+/************************Accès de base******************************/
 echo "<h2><li>Accès de base</li></h2>";
 echo "<h4>Ajout d'éléments à un tableau et lecture de leurs valeurs (à l'aide d'une boucle for)</h4>";
 
@@ -42,7 +42,7 @@ echo  "Élément p2 (2ème array) : " . $p2['jetencre'] . "<br><br>";
 
 
 
-/************************Tableaux associatifs******************************/
+/************************Boucle foreach...as******************************/
 echo "<h2><li>Boucle foreach...as</li></h2>";
 /* Parcours d'un tableau à l'aide de foreach...as */
 
@@ -71,7 +71,7 @@ $papier = array('copieur'  => "Photocopieur et multiusage",
     echo "$item : $description<br>";
 
    
-   
+/************************Tableaux multidimensionnels****************************/
 echo "<h2><li>Tableaux multidimensionnels</li></h2>";
 echo "<b>Création d'un tableau associatif multidimentionnel</b><br>";
 $produits = array(
@@ -106,7 +106,6 @@ $produits = array(
   echo "</pre><br>";
 
 
-
   echo "<b>Création d'un tableau numérique multidimentionnel</b>";
   $plateau = array(
     // tour, cavalier, fou, reine, roi
@@ -133,6 +132,3 @@ $produits = array(
   echo "<br>";
   echo "En accédant directement à la case [7][3] cela donne = " . $plateau[7][3];
   echo "</pre>";
-
-
-?>
